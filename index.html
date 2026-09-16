@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ganesh & Gayathri - Wedding Invitation</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- GSAP core and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Cover Page (Tap to Open) -->
+    <div id="cover-page" class="cover-page">
+        <div class="cover-content">
+            <h1 class="cover-names">Ganesh & Gayathri</h1>
+            <p class="cover-subtitle">Are getting married</p>
+            <button id="open-btn" class="btn-primary">Open Invitation</button>
+        </div>
+    </div>
+
+    <!-- Main Invitation Flow -->
+    <main id="invitation" class="invitation">
+        
+        <!-- SCENE 1: LANDING -->
+        <section id="scene-landing" class="scene scene--landing">
+            
+            <!-- Sky Background Layer for Opacity Transition -->
+            <div class="sky-bg" id="landing-sky"></div>
+            
+            <!-- Sky Crackers -->
+            <img src="https://media.tenor.com/T_7U2mD8tqMAAAAi/fireworks-celebration.gif" class="fireworks-gif fireworks-left" alt="Fireworks">
+            <img src="https://media.tenor.com/T_7U2mD8tqMAAAAi/fireworks-celebration.gif" class="fireworks-gif fireworks-right" alt="Fireworks">
+            <img src="https://media.tenor.com/T_7U2mD8tqMAAAAi/fireworks-celebration.gif" class="fireworks-gif fireworks-center" alt="Fireworks">
+
+            <div class="landing-names" id="hero-names">
+                <h1 class="groom-name">K. Ganesh Raj</h1>
+                <p class="weds-text">W E D S</p>
+                <h1 class="bride-name">V. Gayathri</h1>
+            </div>
+            
+            <div class="landing-gopuram-container mt-4">
+                <img src="assets/images/gopuram_realistic.png" alt="Gopuram" class="gopuram-img" id="hero-gopuram">
+            </div>
+        </section>
+
+        <!-- SCENE 2: MARRIAGE DETAILS (Teal Damask Background) -->
+        <section id="scene-marriage" class="scene scene--marriage">
+            <!-- The Garland Couple on the Seam between Landing and Wedding -->
+            <img src="assets/images/garland-couple.png" id="garland-transition" alt="Garland Couple">
+            
+            <div class="scene-content text-center">
+                <h1 class="invite-title">INVITE</h1>
+                <p class="invite-subtitle mt-4">You to join us in the wedding celebrations of</p>
+                
+                <div class="couple-names-invite mt-8">
+                    <h2 class="invite-name">Ganesh Raj</h2>
+                    <div class="invite-ampersand">&</div>
+                    <h2 class="invite-name">Gayathri</h2>
+                </div>
+
+                <div class="details-box mt-12 border-cream">
+                    <h3 class="event-title text-cream">Muhurtham</h3>
+                    <p class="event-time mt-2">Friday, 13th November 2026</p>
+                    <p class="event-time">9:00 AM – 10:30 AM</p>
+                    <p class="event-venue mt-4"><strong>Venkatachalapathy<br>Sri Raghavendra<br>Marriage Mahal</strong><br>Tirumala, Tirupati Urban,<br>Andhra Pradesh 517504</p>
+                </div>
+
+                <a href="https://maps.app.goo.gl/VrKFysvpAMEoAhia9" target="_blank" class="btn-location mt-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    View Location
+                </a>
+            </div>
+        </section>
+
+        <!-- SCENE 3: RECEPTION (Pink Damask) -->
+        <section id="scene-reception" class="scene scene--reception">
+            <!-- The Vintage Car on the Seam between Wedding and Reception -->
+            <img src="assets/images/vintage-car-transparent.png" id="vintage-car-transition" alt="Vintage Car">
+            
+            <div class="scene-content text-center">
+                <h2 class="invite-title text-cream" style="font-size: 3rem;">RECEPTION</h2>
+                <p class="invite-subtitle text-cream mt-4">Join us for an evening of celebration, dinner, and dancing.</p>
+                
+                <div class="details-box mt-8 border-cream">
+                    <p class="event-time text-cream mt-2">Sunday, 22nd November 2026</p>
+                    <p class="event-time text-cream">From 6:30 PM Onwards</p>
+                    <p class="event-venue text-cream mt-4"><strong>Rotary Club Of Tirupur West Mahal</strong><br>4758+JFG, Somanur-Mangalam Rd, Mangalam,<br>Kaniampundi, Tamil Nadu 641663</p>
+                </div>
+
+                <a href="https://maps.app.goo.gl/y7oRDvw6vN3dvemy8" target="_blank" class="btn-location btn-location-reception mt-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    View Location
+                </a>
+            </div>
+        </section>
+
+        <!-- SCENE 4: MEET THE BRIDE AND GROOM (Yellow-Green Damask) -->
+        <section id="scene-meet-couple" class="scene scene--meet-couple">
+            <!-- The Couple Swing on the Seam between Reception and Meet Couple -->
+            <img src="assets/images/couple-swing.png" id="swing-transition" alt="Couple Swing">
+
+            <!-- Falling Cherry Blossoms Container -->
+            <div id="flower-container"></div>
+            
+            <div class="scene-content text-center">
+                <p class="invite-subtitle text-cream" style="letter-spacing: 4px; font-size: 0.9rem;">MEET THE</p>
+                <h3 class="invite-title text-cream" style="font-size: 2.5rem; margin-top: 0.5rem;">BRIDE AND</h3>
+                <h2 class="invite-name text-cream" style="font-size: 5rem; margin-top: -0.5rem;">GROOM</h2>
+                
+                <div class="couple-grid mt-12">
+                    <!-- Bride -->
+                    <div class="couple-card">
+                        <div class="couple-photo" style="background-image: url('assets/images/bride.jpg');"></div>
+                        <h4 class="couple-name mt-6 text-cream">V. Gayathri</h4>
+                        <p class="couple-detail text-cream mt-2">B.E (CSE)</p>
+                        <p class="couple-detail text-cream">Working at Kaar Technology</p>
+                    </div>
+
+                    <!-- Groom -->
+                    <div class="couple-card">
+                        <div class="couple-photo" style="background-image: url('assets/images/groom.jpg');"></div>
+                        <h4 class="couple-name mt-6 text-cream">K. Ganesh Raj</h4>
+                        <p class="couple-detail text-cream mt-2">B.E (CSE)</p>
+                        <p class="couple-detail text-cream">Working at ASSA ABLOY</p>
+                    </div>
+                </div>
+
+                <p class="elegant-text text-cream" style="margin-top: 4rem; margin-bottom: 8rem;">Our story is just beginning.</p>
+            </div>
+        </section>
+
+        <!-- SCENE 5: CLOSING & COUNTDOWN -->
+        <section id="scene-closing" class="scene scene--closing">
+            <!-- The Watch on the Seam between Meet Couple and Closing -->
+            <img src="assets/images/watch-transition.png" id="watch-transition" alt="Watch Timer">
+            
+            <div class="scene-content text-center">
+                <h2 class="section-title text-gold">The Countdown Begins</h2>
+                
+                <div class="countdown-container mt-8" id="countdown">
+                    <div class="countdown-item"><span id="cd-days">00</span><small>Days</small></div>
+                    <div class="countdown-item"><span id="cd-hours">00</span><small>Hours</small></div>
+                    <div class="countdown-item"><span id="cd-mins">00</span><small>Mins</small></div>
+                    <div class="countdown-item"><span id="cd-secs">00</span><small>Secs</small></div>
+                </div>
+
+                <div class="quote-box mt-12">
+                    <p class="quote-text text-cream">"Two souls with but a single thought,<br>Two hearts that beat as one."</p>
+                </div>
+                
+                <h1 class="thank-you text-gold mt-12">Thank You</h1>
+            </div>
+        </section>
+
+    </main>
+
+    <audio id="bg-music" loop preload="none">
+        <source src="assets/music/wedding-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

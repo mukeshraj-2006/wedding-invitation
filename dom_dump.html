@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="ta"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>திருமண அழைப்பிதழ் | K. Ganesh Raj &amp; V. Gayathri</title>
+
+    <!-- SEO & Open Graph -->
+    <meta name="description" content="K. Ganesh Raj &amp; V. Gayathri cordially invite you to their wedding on November 13, 2026 at Thirumalai, Tirupathi.">
+    <meta name="theme-color" content="#0A5E54">
+    <meta property="og:title" content="Wedding Invitation | K. Ganesh Raj &amp; V. Gayathri">
+    <meta property="og:description" content="K. Ganesh Raj &amp; V. Gayathri cordially invite you to their wedding celebration on November 13, 2026 at Thirumalai, Tirupathi.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&amp;family=Noto+Serif+Tamil:wght@100;200;300;400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="">
+
+    <!-- ═══════════════════════════════════════════════════════
+         COVER PAGE
+         ═══════════════════════════════════════════════════════ -->
+    <div id="cover" class="cover hidden" role="dialog" aria-label="Wedding Invitation Cover">
+        <div class="cover__particles" aria-hidden="true">
+            <span class="particle particle--1"></span>
+            <span class="particle particle--2"></span>
+            <span class="particle particle--3"></span>
+            <span class="particle particle--4"></span>
+        </div>
+        <div class="cover__content">
+            <div class="cover__om" aria-hidden="true">ௐ</div>
+            <div class="cover__ornament" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </div>
+            <h1 class="cover__groom" id="cover-groom-name">K. Ganesh Raj</h1>
+            <div class="cover__ampersand">&amp;</div>
+            <h1 class="cover__bride" id="cover-bride-name">V. Gayathri</h1>
+            <div class="cover__date" id="cover-date">November 13, 2026</div>
+            <button id="open-invitation" class="cover__btn" aria-label="Open Wedding Invitation">
+                <span class="cover__btn-tamil">திருமண அழைப்பிதழை திறக்க</span>
+                <span class="cover__btn-english">OPEN INVITATION</span>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         MAIN INVITATION — CINEMATIC VIEWPORT
+         ═══════════════════════════════════════════════════════ -->
+    <main id="invitation" class="invitation active" aria-label="Wedding Invitation Scenes">
+        
+        <!-- This container is pinned by GSAP -->
+        <div class="pin-spacer" style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1280px; height: 18800px; padding: 0px 0px 18000px;"><div id="cinematic-viewport" class="cinematic-viewport" style="translate: none; rotate: none; scale: none; inset: 0px auto auto 0px; margin: 0px; max-width: 1280px; width: 1280px; max-height: 800px; height: 800px; padding: 0px; transform: translate(0px, 0.001px);">
+            
+            <!-- Z-INDEX 1: BACKGROUND PANELS -->
+            <div id="bg-blue" class="bg-panel bg-panel--blue" style="opacity: 1;"></div>
+            <div id="bg-teal" class="bg-panel bg-panel--teal" style="opacity: 0;"></div>
+            <div id="bg-pink" class="bg-panel bg-panel--pink" style="opacity: 0;"></div>
+            <div id="bg-yellow" class="bg-panel bg-panel--yellow" style="opacity: 0;"></div>
+            <div id="bg-navy" class="bg-panel bg-panel--navy" style="opacity: 0;"></div>
+
+            <!-- Z-INDEX 2: TEXTURE & LANTERNS -->
+            <div class="cinematic-texture" aria-hidden="true"></div>
+            <div id="lanterns" class="cinematic-lanterns" aria-hidden="true" style="opacity: 1;">
+                <div class="lantern lantern--1" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -7.5402px, 0px) scale(1.2, 1.2);"></div>
+                <div class="lantern lantern--2" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 6.8584px, 0px) scale(0.8, 0.8);"></div>
+                <div class="lantern lantern--3" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -2.129px, 0px) scale(0.9, 0.9);"></div>
+                <div class="lantern lantern--4" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 7.354px, 0px) scale(1.1, 1.1);"></div>
+            </div>
+
+            <!-- Z-INDEX 3: FOREGROUND ARTWORK (GOPURAM & CAR) -->
+            <!-- Gopuram is reused at start and end -->
+            <div id="cinematic-gopuram" class="cinematic-art gopuram-art" style="translate: none; rotate: none; scale: none; transform: translate(0%, 30%) translate3d(0px, 0px, 0px); opacity: 1;">
+                <img id="opening-temple-img" alt="Gopuram" src="assets/images/gopuram_new.png">
+                <img id="closing-temple-img" alt="Gopuram" style="display:none;" src="assets/images/gopuram_new.png"> <!-- just to map id -->
+            </div>
+
+            <!-- Car is reused multiple times as a transition mask -->
+            <div id="cinematic-car" class="cinematic-art car-art" style="translate: none; rotate: none; scale: none; transform: translate(0%, 120%); opacity: 0;">
+                <img id="photo-car-img" alt="Vintage Car" src="assets/images/vintage-car-transparent.png">
+            </div>
+
+            <!-- Z-INDEX 4: SCENE CONTENT LAYERS -->
+            
+            <!-- Scene: Opening Names -->
+            <div id="scene-opening-names" class="c-scene" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px); opacity: 1;">
+                <h2 class="opening__groom" id="opening-groom">K. Ganesh Raj</h2>
+                <div class="opening__weds">W E D S</div>
+                <h2 class="opening__bride" id="opening-bride">V. Gayathri</h2>
+            </div>
+
+            <!-- Scene: Teal Invitation Title -->
+            <div id="scene-teal-title" class="c-scene" style="opacity: 0; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                <img id="title-ganesha-img" class="title__ganesha-img" alt="Lord Ganesha" src="assets/images/ganesha.jpg">
+                <div class="envelope__lineage" id="envelope-lineage">
+                <p>With the heavenly blessings of</p>
+                <p>A.P.வெங்கடேசன் &amp; V.மகேஸ்வரி</p>
+                <p>S.கந்தசாமி &amp; K.சாந்தி</p>
+            </div>
+                <h1 class="envelope__invite-heading" style="translate: none; rotate: none; scale: none; opacity: 0; transform: scale(0.8, 0.8);">INVITE</h1>
+                <p class="envelope__invite-sub" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 20px);">You to join us in the wedding celebrations of</p>
+                <div class="title__names">
+                    <span id="title-tamil" class="hidden">திருமண அழைப்பிதழ்</span>
+                    <span id="title-english" class="hidden">Wedding Invitation</span>
+                </div>
+            </div>
+
+            <!-- Scene: Arched Cards Sequence -->
+            <div id="scene-arched-cards" class="c-scene c-cards-container">
+                <!-- Card 1: Couple -->
+                <div id="card-couple" class="arch-card" style="translate: none; rotate: none; scale: none; transform: translate(0%, 150%) translate(0px, 1200px);">
+                    <div class="arch-card__content">
+                        <div class="couple__person" id="couple-groom-intro-tamil">எங்களது செல்வ புத்திரனுமான</div>
+                        <h2 class="couple__name" id="couple-groom-name-tamil">K.கணேஷ் ராஜ்</h2>
+                        <div class="couple__qual" id="couple-groom-qual">B.E(CSE)</div>
+                        <div class="couple__work" id="couple-groom-workplace">Assa Abloy, Chennai</div>
+                        
+                        <div class="couple__amp">&amp;</div>
+                        
+                        <div class="couple__person" id="couple-bride-intro-tamil">எங்களது செல்வ புத்திரியுமான</div>
+                        <h2 class="couple__name" id="couple-bride-name-tamil">V.காயத்ரீ</h2>
+                        <div class="couple__qual" id="couple-bride-qual">B.E(CSE)</div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Details -->
+                <div id="card-details" class="arch-card" style="translate: none; rotate: none; scale: none; transform: translate(0%, 150%) translate(0px, 1200px);">
+                    <div class="arch-card__content">
+                        <h3>WEDDING DAY</h3>
+                        <div id="details-date">13.11.2026</div>
+                        <div id="details-day-tamil">வெள்ளிக்கிழமை</div>
+                        <div id="details-day-english">Friday</div>
+                        <div class="details__divider"></div>
+                        <h3>MUHURTHAM</h3>
+                        <div id="details-muhurtham-tamil">காலை 9.00 – 10.30 மணி</div>
+                        <div id="details-muhurtham-english">9:00 AM – 10:30 AM</div>
+                        <div class="details__divider"></div>
+                        <div class="astro-grid">
+                            <span id="astro-tithi">சதுர்த்தி திதி</span>
+                            <span id="astro-nakshatra">மூலம் நட்சத்திரம்</span>
+                            <span id="astro-yogam">அமிர்தயோகம்</span>
+                            <span id="astro-lagnam">தனுசு லக்னம்</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Family -->
+                <div id="card-family" class="arch-card" style="translate: none; rotate: none; scale: none; transform: translate(0%, 150%) translate(0px, 1200px);">
+                    <div class="arch-card__content family-card-content">
+                        <h3 id="family-heading-tamil">தங்கள் அன்புள்ள</h3>
+                        <h4 id="family-heading-english">With Love</h4>
+                        <div id="family-groom-parents"><h4 style="margin-bottom:0.5rem;color:var(--muted-gold);font-family:var(--font-sans);letter-spacing:1px;font-size:0.8rem;">GROOM'S PARENTS</h4>A.P.வெங்கடேசன் &amp; V.மகேஸ்வரி</div>
+                        <div id="family-bride-parents"><h4 style="margin-bottom:0.5rem;color:var(--muted-gold);font-family:var(--font-sans);letter-spacing:1px;font-size:0.8rem;">BRIDE'S PARENTS</h4>S.கந்தசாமி &amp; K.சாந்தி</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scene: Route / Venue -->
+            <div id="scene-route" class="c-scene" style="opacity: 0; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                <h2>SEE THE<br>ROUTE</h2>
+                <div class="venue__name">
+                    <p id="venue-name-tamil">வெங்கடாசலபதி ஸ்ரீ ராகவேந்திரா திருமண மஹால்</p>
+                    <p id="venue-name-english">Venkatachalapathi Sri Raghavendra Thirumana Mahal</p>
+                </div>
+                <div class="venue__location">
+                    <p id="venue-loc-tamil">திருமலை திருப்பதி</p>
+                    <p id="venue-loc-english">Thirumalai, Tirupathi</p>
+                </div>
+                <a id="venue-map-link" class="venue__map-btn" target="_blank" href="https://maps.google.com/?q=Venkatachalapathi+Sri+Raghavendra+Thirumana+Mahal+Tirupati">
+                    <span>VIEW LOCATION</span>
+                </a>
+            </div>
+
+            <!-- Scene: Couple Photo Frame -->
+            <div id="scene-photo-frame" class="c-scene" style="opacity: 0;">
+                <div class="photo__frame-art" style="translate: none; rotate: none; scale: none; opacity: 0; transform: scale(0.8, 0.8);">
+                    <img id="photo-frame-img" alt="Ornate Frame" src="assets/images/frame-transparent.png">
+                    <img id="couple-photo" class="photo__inside" alt="Couple" src="assets/images/couple.jpg">
+                </div>
+            </div>
+
+            <!-- Scene: Yellow Information -->
+            <div id="scene-info" class="c-scene" style="opacity: 0; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                <h2>THINGS<br>TO KNOW</h2>
+                <div class="info-grid">
+                    <div style="translate: none; rotate: none; scale: none; transform: translate(0px, 30px); opacity: 0;">
+                        <h3>DATE</h3>
+                        <p id="info-date">November 13, 2026
+வெள்ளிக்கிழமை</p>
+                    </div>
+                    <div style="translate: none; rotate: none; scale: none; transform: translate(0px, 30px); opacity: 0;">
+                        <h3>TIME</h3>
+                        <p id="info-muhurtham">காலை 9.00 – 10.30 மணி</p>
+                    </div>
+                    <div style="translate: none; rotate: none; scale: none; transform: translate(0px, 30px); opacity: 0;">
+                        <h3>VENUE</h3>
+                        <p id="info-venue">திருமலை திருப்பதி</p>
+                    </div>
+                    <div style="translate: none; rotate: none; scale: none; transform: translate(0px, 30px); opacity: 0;">
+                        <h3>NOTE</h3>
+                        <p id="info-note">(இது இல்ல அழைப்பு)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scene: Final Countdown -->
+            <div id="scene-final" class="c-scene" style="opacity: 0;">
+                <h2>THE COUNTDOWN BEGINS</h2>
+                <div class="closing__countdown" id="countdown">
+                    <div class="countdown__item"><span id="countdown-days">57</span><span>DAYS</span></div>
+                    <div class="countdown__item"><span id="countdown-hours">11</span><span>HOURS</span></div>
+                    <div class="countdown__item"><span id="countdown-minutes">35</span><span>MINS</span></div>
+                    <div class="countdown__item"><span id="countdown-seconds">29</span><span>SECS</span></div>
+                </div>
+                <div class="closing__couple">
+                    <span id="closing-groom">K. Ganesh Raj</span> &amp; <span id="closing-bride">V. Gayathri</span>
+                </div>
+                <div class="closing__blessing">
+                    <p id="closing-blessing-tamil">உங்கள் வருகையால் எங்கள் திருமண விழா சிறப்புறும்.</p>
+                    <p id="closing-blessing-english">Your presence will make our wedding celebration special.</p>
+                </div>
+                
+                <!-- Dump hidden elements to avoid breaking script.js populateData() -->
+                <div class="hidden-data-dump" style="display:none;">
+                    <span id="religious-left"></span><span id="religious-center"></span><span id="religious-right"></span>
+                    <span id="family-groom-title"></span><span id="family-bride-title"></span>
+                    <span id="family-groom-lineage"></span><span id="family-bride-lineage"></span>
+                    <span id="extended-groom-title"></span><span id="extended-bride-title"></span>
+                    <span id="extended-groom"></span><span id="extended-bride"></span><span id="extended-closing"></span>
+                </div>
+            </div>
+
+        </div></div>
+    </main>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CONTROLS
+         ═══════════════════════════════════════════════════════ -->
+    <div id="controls" class="controls visible" role="toolbar">
+        <button id="music-toggle" class="control-btn control-btn--music">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+        </button>
+        <button id="share-btn" class="control-btn control-btn--share">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+        </button>
+        <button id="add-calendar" class="control-btn control-btn--calendar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        </button>
+    </div>
+
+    <div id="scroll-progress" class="scroll-progress visible">
+        <div class="scroll-progress__bar" id="scroll-bar" style="width: 5.5e-06%;"></div>
+    </div>
+
+    <audio id="bg-music" loop="" preload="none"><source src="assets/music/wedding-music.mp3" type="audio/mpeg"></audio>
+    <div id="toast" class="toast"><span id="toast-message"></span></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body></html>

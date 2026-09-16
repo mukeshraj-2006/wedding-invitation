@@ -1,0 +1,656 @@
+:root {
+    --cream: #fdfbf7;
+    --gold: #d4af37;
+    --muted-gold: #c5a059;
+    --charcoal: #2c2c2c;
+    
+    /* Scene Backgrounds */
+    --bg-landing: #e6eef5; 
+    --bg-marriage: #509e8d; /* Teal Green */
+    --bg-reception: #d49ab7; /* Soft Pink / Mauve */
+    --bg-couple: #cdd27a; /* Yellow-Green Damask */
+    --bg-closing: #0a1118; /* Deep dark space for closing */
+    
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Montserrat', sans-serif;
+    --font-script: 'Great Vibes', cursive;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    background-color: var(--charcoal);
+    color: var(--charcoal);
+    overflow-x: hidden;
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.text-gold { color: var(--gold); }
+.text-cream { color: var(--cream); }
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-8 { margin-top: 2rem; }
+.mt-12 { margin-top: 3rem; }
+.mb-8 { margin-bottom: 2rem; }
+.flex-column-center { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+/* ----------------------------------------------------
+   COVER PAGE
+   ---------------------------------------------------- */
+.cover-page {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-marriage);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cream);
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.cover-page.open {
+    transform: translateY(-100%);
+}
+.cover-content { text-align: center; }
+.cover-names { font-family: var(--font-serif); font-size: 3rem; margin-bottom: 0.5rem; }
+.cover-subtitle { font-family: var(--font-sans); letter-spacing: 4px; font-weight: 300; margin-bottom: 2rem; }
+.btn-primary {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background: var(--gold);
+    color: var(--bg-marriage);
+}
+
+/* ----------------------------------------------------
+   INVITATION CONTAINER
+   ---------------------------------------------------- */
+.invitation {
+    display: none;
+    width: 100%;
+}
+.invitation.active { display: block; }
+
+/* SCENES GENERAL */
+.scene {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Removed overflow: hidden so the car can overlap between scenes */
+}
+.scene-content {
+    max-width: 600px;
+    padding: 2rem;
+    z-index: 10;
+}
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.elegant-text {
+    font-family: var(--font-sans);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* ----------------------------------------------------
+   SCENE 1: LANDING
+   ---------------------------------------------------- */
+.scene--landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5vh;
+    overflow: hidden; /* For fireworks */
+    position: relative;
+    z-index: 1;
+    /* Base color matching the next scene for a seamless transition */
+    background-color: var(--bg-marriage);
+}
+
+.sky-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url('assets/images/realistic-sky.jpg');
+    background-size: cover;
+    background-repeat: repeat-x;
+    animation: driftSky 120s linear infinite;
+}
+
+@keyframes driftSky {
+    from { background-position: 0 0; }
+    to { background-position: -200vw 0; }
+}
+
+/* DECORATIONS */
+.fireworks-gif {
+    position: absolute;
+    top: 5vh;
+    width: 250px;
+    height: auto;
+    z-index: 1; /* Behind the text and gopuram, in the sky */
+    pointer-events: none;
+    mix-blend-mode: screen; /* Removes black background perfectly */
+    opacity: 0.7; /* Soften the fireworks slightly */
+}
+.fireworks-left { left: 5%; top: 15vh; width: 200px; animation: float 3s ease-in-out infinite alternate; }
+.fireworks-right { right: 5%; top: 10vh; animation: float 4s ease-in-out infinite alternate-reverse; }
+.fireworks-center { left: 50%; transform: translateX(-50%); top: 5vh; width: 300px; opacity: 0.9; }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-10px); }
+}
+
+.landing-gopuram-container {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin-top: auto; /* Push to the very bottom of the flexbox */
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+.gopuram-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.landing-names {
+    text-align: center;
+    z-index: 3;
+    padding-top: 15vh;
+}
+.groom-name, .bride-name {
+    font-family: var(--font-serif);
+    font-size: 5.5rem;
+    margin: 0;
+    /* Ultra-Realistic Metallic Gold */
+    background: linear-gradient(to bottom, 
+        #fdf2c2 0%, 
+        #d4af37 25%, 
+        #8a5a19 45%, 
+        #eed07e 50%, 
+        #ffebb5 75%, 
+        #b88a35 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.6));
+    font-weight: 400;
+    line-height: 1.1;
+}
+.weds-text {
+    font-family: var(--font-serif);
+    letter-spacing: 12px;
+    font-size: 1.2rem;
+    /* Matching shiny gold */
+    background: linear-gradient(to right, #d4af37, #ffebb5, #8a5a19, #ffebb5, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
+    margin: 1rem 0;
+}
+
+/* ----------------------------------------------------
+   SCENE 2: MARRIAGE DETAILS
+   ---------------------------------------------------- */
+.scene--marriage {
+    background-color: var(--bg-marriage);
+    color: #f7ebd3;
+    z-index: 1;
+    position: relative;
+}
+.scene--marriage::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/images/damask-pattern.jpg');
+    background-size: 500px 500px;
+    mix-blend-mode: multiply; /* Blends the pattern perfectly into the teal */
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.invite-title {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin: 0;
+}
+.invite-subtitle {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 300;
+}
+.invite-name {
+    font-family: var(--font-serif);
+    font-size: 5.5rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1;
+}
+.invite-ampersand {
+    font-family: var(--font-script);
+    font-size: 6rem;
+    margin: -1rem 0;
+    color: #f7ebd3;
+}
+
+.details-box {
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 2rem;
+    background: rgba(0,0,0,0.1);
+}
+.event-title { font-family: var(--font-serif); font-size: 1.8rem; color: var(--gold); margin: 0; }
+.event-time { font-family: var(--font-sans); font-weight: 300; margin: 5px 0; }
+.event-venue { font-family: var(--font-sans); font-weight: 400; line-height: 1.6; }
+
+/* Location Button */
+.btn-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.btn-location:hover {
+    background: var(--gold);
+    color: #1a1a1a;
+}
+.btn-location svg {
+    flex-shrink: 0;
+}
+
+/* Reception Page Specific Button Override */
+.btn-location-reception {
+    border-color: #f7ebd3;
+    color: #f7ebd3;
+}
+.btn-location-reception:hover {
+    background: #f7ebd3;
+    color: var(--bg-reception);
+}
+
+/* ----------------------------------------------------
+   SCENE 3: RECEPTION (Pink Damask)
+   ---------------------------------------------------- */
+.scene--reception {
+    background-color: var(--bg-reception);
+    position: relative;
+    z-index: 1;
+}
+.scene--reception::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/images/pink-damask-pattern.jpg');
+    background-size: 500px 500px;
+    mix-blend-mode: multiply;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* ----------------------------------------------------
+   SCENE 4: MEET THE BRIDE AND GROOM (Yellow-Green Damask)
+   ---------------------------------------------------- */
+.scene--meet-couple {
+    background-color: var(--bg-couple);
+    position: relative;
+    z-index: 1;
+}
+.scene--meet-couple::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/images/yellow-green-damask.png');
+    background-size: 500px 500px;
+    mix-blend-mode: multiply;
+    opacity: 0.6; /* Slightly stronger opacity for this pattern */
+    z-index: -1;
+}
+
+/* Garland Couple on Transition Boundary (Landing -> Marriage) */
+#garland-transition {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centered exactly on the border */
+    width: 350px; 
+    max-width: 90%;
+    max-height: 40vh;
+    object-fit: contain;
+    height: auto;
+    z-index: 10;
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.5));
+}
+
+/* Vintage Car on Transition Boundary */
+#vintage-car-transition {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centered exactly on the border */
+    width: 500px; 
+    max-width: 90%;
+    height: auto;
+    z-index: 10;
+    filter: drop-shadow(0px 20px 30px rgba(0,0,0,0.5));
+}
+@media (max-width: 768px) {
+    #garland-transition {
+        width: 80%;
+        max-height: 30vh;
+    }
+    #vintage-car-transition {
+        width: 85%;
+    }
+    #swing-transition {
+        width: 85%;
+        max-height: 35vh; /* Keep it manageable on mobile */
+    }
+    #watch-transition {
+        width: 200px; /* Slightly smaller on mobile */
+    }
+}
+.border-cream {
+    border-color: rgba(253, 251, 247, 0.2);
+    background: rgba(255,255,255,0.05);
+}
+
+/* Couple Swing on Transition Boundary */
+#swing-transition {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centered exactly on the border */
+    width: 400px; /* Smaller width because it is very tall */
+    max-height: 45vh; /* Prevents it from being too tall on desktop */
+    object-fit: contain;
+    z-index: 10;
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.3));
+}
+
+/* Falling Flowers */
+#flower-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+.scene--reception .scene-content {
+    z-index: 2; /* Keep content above flowers */
+}
+.flower-petal {
+    position: absolute;
+    top: -10%;
+    font-size: 1.5rem;
+    user-select: none;
+    animation: fall linear infinite; /* Loops continuously */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0vh) rotate(0deg) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1; /* Fade in smoothly */
+    }
+    75% {
+        opacity: 1; /* Stay fully visible */
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg) translateX(50px);
+        opacity: 0; /* Fade out smoothly near the bottom */
+    }
+}
+
+/* ----------------------------------------------------
+   SCENE 4: MEET THE COUPLE
+   ---------------------------------------------------- */
+.scene--couple {
+    background-color: var(--bg-couple);
+    padding-bottom: 12rem; /* Add plenty of space so text doesn't overlap the watch */
+    z-index: 3;
+}
+.couple-photo {
+    width: 250px;
+    height: 350px;
+    min-width: 250px;
+    min-height: 350px;
+    max-width: 250px;
+    max-height: 350px;
+    flex: 0 0 350px; /* Absolutely prevent flexing */
+    background-position: center 20%;
+    background-size: cover;
+    border: 4px solid var(--gold);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Couple Grid Details */
+.couple-grid {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    align-items: flex-start;
+}
+.couple-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.couple-name {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+}
+.couple-detail {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 2px 0;
+    opacity: 0.9;
+}
+
+/* Utilities */
+.mt-2 { margin-top: 0.5rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-8 { margin-top: 2rem; }
+.mt-12 { margin-top: 3rem; }
+
+/* ----------------------------------------------------
+   SCENE 5: CLOSING
+   ---------------------------------------------------- */
+.scene--closing {
+    background-color: #fdfbf7; /* Elegant White/Cream */
+    position: relative;
+    z-index: 4;
+}
+.scene--closing::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/images/pink-damask-pattern.jpg');
+    background-size: 500px 500px;
+    /* Use CSS filters to turn the pink pattern into a shiny gold! */
+    filter: sepia(100%) hue-rotate(5deg) saturate(400%) contrast(1.5) opacity(0.2);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Watch on Transition Boundary (Meet Couple -> Closing) */
+#watch-transition {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px; 
+    max-width: 80%;
+    height: auto;
+    z-index: 10;
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.4));
+}
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    color: var(--gold);
+}
+.countdown-item span {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--gold);
+    text-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+}
+.countdown-item small {
+    font-family: var(--font-sans);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    color: var(--bg-marriage); /* Deep teal for contrast against white */
+}
+.quote-text {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--bg-marriage); /* Deep teal for contrast */
+}
+.thank-you {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    margin: 0;
+}
+
+/* ====================================================
+   MOBILE RESPONSIVENESS
+   ==================================================== */
+@media (max-width: 768px) {
+    /* General Spacing */
+    .scene-content {
+        padding: 1rem;
+    }
+
+    /* Cover Page */
+    .cover-names { font-size: 2.2rem; }
+    .cover-subtitle { font-size: 0.8rem; letter-spacing: 2px; }
+
+    /* Scene 1: Landing */
+    .landing-names {
+        padding-top: 10vh;
+    }
+    .groom-name, .bride-name {
+        font-size: 3.2rem;
+        letter-spacing: 2px;
+    }
+    .weds-text {
+        font-size: 1rem;
+        letter-spacing: 6px;
+    }
+    .landing-gopuram-container {
+        margin-top: auto; /* Push perfectly to the bottom of the screen */
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+    .gopuram-img {
+        width: 110%; /* Slightly wider than screen for grandeur */
+        max-width: none;
+        height: auto;
+        min-height: 60vh;
+        object-fit: cover;
+        object-position: top center; /* Keep the top spire visible, crop from bottom */
+        display: block;
+        margin-left: -5%; /* Center the wider image */
+    }
+    
+    /* Fireworks on mobile */
+    .fireworks-left, .fireworks-right { width: 120px; }
+    .fireworks-center { width: 180px; }
+
+    /* Scene 2: Marriage (INVITE) */
+    .invite-title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    .invite-subtitle {
+        font-size: 0.85rem;
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+    .invite-name {
+        font-size: 3rem;
+    }
+    .invite-ampersand {
+        font-size: 3.5rem;
+        margin: -0.5rem 0;
+    }
+    .details-box {
+        padding: 1.5rem 1rem;
+        margin-top: 2rem;
+    }
+
+    /* Countdown */
+    .countdown-item span {
+        font-size: 1.8rem;
+    }
+    .thank-you {
+        font-size: 3rem;
+    }
+
+    /* Couple Grid */
+    .couple-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+}
