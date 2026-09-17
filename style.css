@@ -135,6 +135,15 @@ body {
     background-repeat: repeat-x;
     animation: driftSky 120s linear infinite;
 }
+.landing-damask {
+    position: absolute;
+    inset: 0;
+    z-index: -2; /* Behind the sky so it's revealed when sky fades */
+    background-image: url('assets/images/damask-pattern.jpg');
+    background-size: 500px 500px;
+    mix-blend-mode: multiply;
+    opacity: 0.3; /* Same opacity as marriage scene */
+}
 
 @keyframes driftSky {
     from { background-position: 0 0; }
