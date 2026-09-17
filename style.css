@@ -310,15 +310,12 @@ body {
 /* Family Details Layout */
 .royal-title {
     font-family: var(--font-serif);
-    font-size: 3rem;
+    font-size: 4rem;
+    letter-spacing: 4px;
+    font-weight: 400;
     margin: 0;
-    background: linear-gradient(to right, #d4af37, #ffebb5, #8a5a19, #ffebb5, #d4af37);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
+    color: var(--cream);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 .family-quote {
     font-family: var(--font-serif);
@@ -342,10 +339,11 @@ body {
 }
 .family-name {
     font-family: var(--font-serif);
-    font-size: 2.2rem;
+    font-size: 4rem;
+    font-weight: 400;
     color: var(--gold);
     margin: 0 0 1rem 0;
-    letter-spacing: 2px;
+    line-height: 1;
 }
 .family-details p {
     font-family: var(--font-sans);
@@ -730,13 +728,13 @@ body {
     /* Scene 2: Families */
     .royal-title {
         font-size: 2rem;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
     }
     .family-container {
         gap: 3rem;
     }
     .family-name {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
     }
     .family-details p {
         font-size: 1rem;
