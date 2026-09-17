@@ -191,6 +191,32 @@ body {
     z-index: 3;
     padding-top: 15vh;
 }
+.landing-logo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.4));
+    margin-bottom: 0.5rem;
+}
+.save-date-text {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    letter-spacing: 12px;
+    color: var(--gold);
+    margin-top: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    font-weight: 600;
+}
+.wedding-date-text {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    letter-spacing: 6px;
+    color: var(--cream);
+    margin-top: 0.5rem;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
 .groom-name, .bride-name {
     font-family: var(--font-serif);
     font-size: 5.5rem;
@@ -598,6 +624,17 @@ body {
     /* Scene 1: Landing */
     .landing-names {
         padding-top: 10vh;
+    }
+    .landing-logo {
+        width: 100%;
+        max-width: 280px; /* Small enough so it doesn't push gopuram down */
+    }
+    .save-date-text {
+        font-size: 0.8rem;
+        letter-spacing: 6px;
+    }
+    .wedding-date-text {
+        font-size: 1.3rem;
     }
     .groom-name, .bride-name {
         font-size: 3.2rem;
