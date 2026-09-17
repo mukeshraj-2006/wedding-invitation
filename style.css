@@ -357,6 +357,22 @@ body {
     color: var(--gold);
 }
 
+/* Scroll Animations for Family Section */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.slide-in-left {
+    transform: translateX(-150px);
+}
+.slide-in-right {
+    transform: translateX(150px);
+}
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .details-box {
     border: 1px solid rgba(212, 175, 55, 0.3);
     padding: 2rem;
@@ -730,6 +746,12 @@ body {
         font-size: 1.6rem !important; /* Override inline style to fit single line on mobile */
         letter-spacing: 2px;
         white-space: nowrap;
+    }
+    .slide-in-left {
+        transform: translateX(-50px);
+    }
+    .slide-in-right {
+        transform: translateX(50px);
     }
     .family-container {
         gap: 3rem;

@@ -206,4 +206,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update every second
     setInterval(updateCountdown, 1000);
     updateCountdown(); // Initial call
+
+    // --- 5. SCROLL ANIMATIONS ---
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Optional: Unobserve if we only want it to animate once
+                // scrollObserver.unobserve(entry.target);
+            } else {
+                // Remove class when out of view so it animates again when scrolling back
+                entry.target.classList.remove('is-visible');
+            }
+        });
+    }, {
+        threshold: 0.2 // Trigger when 20% of the element is visible
+    });
+
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach(el => scrollObserver.observe(el));
 });
