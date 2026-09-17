@@ -726,9 +726,10 @@ body {
     .fireworks-center { width: 180px; }
 
     /* Scene 2: Families */
-    .royal-title {
-        font-size: 2rem;
+    .family-column .invite-title {
+        font-size: 1.6rem !important; /* Override inline style to fit single line on mobile */
         letter-spacing: 2px;
+        white-space: nowrap;
     }
     .family-container {
         gap: 3rem;
