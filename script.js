@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // FADE OUT SKY AND MORPH COLOR EARLY IN THE SCROLL
         // (Finishes at duration 1.0, while the pin lasts until duration 1.5)
-        tl1.to(".sky-bg", { opacity: 0, duration: 1.0 }, 0);
+        tl1.to(".sky-bg", { autoAlpha: 0, duration: 1.0 }, 0); // autoAlpha forces visibility: hidden
         tl1.to("#scene-landing", { backgroundColor: "#509e8d", duration: 1.0 }, 0);
 
 
