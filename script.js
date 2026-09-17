@@ -171,8 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- 4. COUNTDOWN TIMER LOGIC ---
-    // Wedding Date: Nov 13, 2026
-    const weddingDate = new Date("Nov 13, 2026 09:00:00").getTime();
+    // Reception Date: Nov 22, 2026
+    const weddingDate = new Date("Nov 22, 2026 18:30:00").getTime();
     
     const daysEl = document.getElementById('cd-days');
     const hoursEl = document.getElementById('cd-hours');
