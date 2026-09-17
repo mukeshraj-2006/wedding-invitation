@@ -391,8 +391,8 @@ body {
         width: 85%;
     }
     #swing-transition {
-        width: 85%;
-        max-height: 35vh; /* Keep it manageable on mobile */
+        width: 65%; /* Reduced size on mobile as requested */
+        max-height: 35vh; 
     }
     #watch-transition {
         width: 200px; /* Slightly smaller on mobile */
@@ -588,7 +588,7 @@ body {
 @media (max-width: 768px) {
     /* General Spacing */
     .scene-content {
-        padding: 1rem;
+        padding: 8rem 1rem; /* Added generous top/bottom padding so text doesn't hit transition images */
     }
 
     /* Cover Page */
