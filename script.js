@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: "#scene-landing",
                 start: "top top",
                 end: "+=120%", 
-                scrub: 1,
+                scrub: true, // removed the 1-second lag so it instantly fades
                 pin: true,
             }
         });
