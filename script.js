@@ -45,8 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
         tl1.to("#hero-names", { scale: 1.5, yPercent: -150, opacity: 0, duration: 1 }, 0);
         // The fireworks parallax up and away
         tl1.to(".fireworks-gif", { yPercent: -80, opacity: 0, duration: 0.8 }, 0);
-        // Background morphs to Marriage edge color
-        tl1.to("#scene-landing", { backgroundColor: "#9b3d3d", duration: 1 }, 0);
+        
+        // --- NEW: FADE OUT SKY SIMULTANEOUSLY ---
+        tl1.to(".sky-bg", { opacity: 0, duration: 1.5, ease: "power2.in" }, 0);
+        
+        // Background morphs to match the Marriage scene's teal color exactly
+        tl1.to("#scene-landing", { backgroundColor: "#509e8d", duration: 1.5 }, 0);
 
 
         // B. Scene 2 (Marriage) to Scene 3 (Reception)
