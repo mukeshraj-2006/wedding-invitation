@@ -217,7 +217,8 @@ body {
 }
 .wedding-date-text {
     font-family: var(--font-serif);
-    font-size: 2rem;
+    font-size: 2.5rem; /* Enlarged font size */
+    font-weight: 600; /* Added boldness for visibility */
     letter-spacing: 6px;
     color: var(--gold); /* Changed to gold for visibility against clouds */
     margin-top: 0.5rem;
@@ -641,7 +642,7 @@ body {
         letter-spacing: 6px;
     }
     .wedding-date-text {
-        font-size: 1.3rem;
+        font-size: 1.6rem; /* Enlarged for mobile */
     }
     .groom-name, .bride-name {
         font-size: 3.2rem;
