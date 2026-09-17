@@ -267,6 +267,8 @@ body {
     color: #f7ebd3;
     z-index: 1;
     position: relative;
+    min-height: 100vh;
+    height: auto; /* Allow it to expand if content is tall */
 }
 .scene--marriage::before {
     content: '';
@@ -303,6 +305,47 @@ body {
     font-size: 6rem;
     margin: -1rem 0;
     color: #f7ebd3;
+}
+
+/* Family Details Layout */
+.family-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Allows stacking if viewport is narrow */
+}
+.family-column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.family-img {
+    width: 250px;
+    height: 400px; /* Fixed height to keep them aligned */
+    object-fit: contain;
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.4));
+    margin-bottom: 1.5rem;
+}
+.family-name {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    color: var(--gold);
+    margin: 0 0 1rem 0;
+    letter-spacing: 2px;
+}
+.family-details p {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0;
+    font-weight: 300;
+}
+.family-details strong {
+    font-weight: 600;
+    color: var(--gold);
 }
 
 .details-box {
@@ -673,10 +716,25 @@ body {
     .fireworks-left, .fireworks-right { width: 120px; }
     .fireworks-center { width: 180px; }
 
-    /* Scene 2: Marriage (INVITE) */
+    /* Scene 2: Families */
     .invite-title {
         font-size: 2rem;
         letter-spacing: 2px;
+    }
+    .family-container {
+        gap: 2rem;
+        flex-direction: column;
+    }
+    .family-img {
+        width: 200px;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    .family-name {
+        font-size: 1.8rem;
+    }
+    .family-details p {
+        font-size: 1rem;
     }
     .invite-subtitle {
         font-size: 0.85rem;
