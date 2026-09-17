@@ -46,11 +46,18 @@ document.addEventListener('DOMContentLoaded', () => {
         // The fireworks parallax up and away
         tl1.to(".fireworks-gif", { yPercent: -80, opacity: 0, duration: 0.8 }, 0);
         
-        // --- NEW: FADE OUT SKY SIMULTANEOUSLY ---
-        tl1.to(".sky-bg", { opacity: 0, duration: 1.5, ease: "power2.in" }, 0);
-        
-        // Background morphs to match the Marriage scene's teal color exactly
-        tl1.to("#scene-landing", { backgroundColor: "#509e8d", duration: 1.5 }, 0);
+        // FADE OUT SKY ONCE (Never comes back when scrolling up)
+        gsap.to(".sky-bg", {
+            scrollTrigger: {
+                trigger: "#scene-landing",
+                start: "top top",
+                toggleActions: "play none none none",
+                once: true
+            },
+            opacity: 0,
+            duration: 1.5,
+            ease: "power2.inOut"
+        });
 
 
         // B. Scene 2 (Marriage) to Scene 3 (Reception)
