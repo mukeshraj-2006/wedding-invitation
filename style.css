@@ -308,26 +308,37 @@ body {
 }
 
 /* Family Details Layout */
-.family-container {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    margin-top: 2rem;
-    flex-wrap: wrap; /* Allows stacking if viewport is narrow */
+.royal-title {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    margin: 0;
+    background: linear-gradient(to right, #d4af37, #ffebb5, #8a5a19, #ffebb5, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
 }
-.family-column {
-    flex: 1;
-    min-width: 300px;
+.family-quote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-top: 4rem;
+    letter-spacing: 2px;
+}
+.family-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 6rem;
+    margin-top: 2rem;
 }
-.family-img {
-    width: 250px;
-    height: 400px; /* Fixed height to keep them aligned */
-    object-fit: contain;
-    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.4));
-    margin-bottom: 1.5rem;
+.family-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .family-name {
     font-family: var(--font-serif);
@@ -717,18 +728,12 @@ body {
     .fireworks-center { width: 180px; }
 
     /* Scene 2: Families */
-    .invite-title {
+    .royal-title {
         font-size: 2rem;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
     }
     .family-container {
-        gap: 2rem;
-        flex-direction: column;
-    }
-    .family-img {
-        width: 200px;
-        height: auto;
-        margin-bottom: 1rem;
+        gap: 3rem;
     }
     .family-name {
         font-size: 1.8rem;
@@ -736,21 +741,9 @@ body {
     .family-details p {
         font-size: 1rem;
     }
-    .invite-subtitle {
-        font-size: 0.85rem;
-        margin-top: 1rem;
-        padding: 0 1rem;
-    }
-    .invite-name {
-        font-size: 3rem;
-    }
-    .invite-ampersand {
-        font-size: 3.5rem;
-        margin: -0.5rem 0;
-    }
-    .details-box {
-        padding: 1.5rem 1rem;
-        margin-top: 2rem;
+    .family-quote {
+        font-size: 1.2rem;
+        margin-top: 3rem;
     }
 
     /* Countdown */
