@@ -353,7 +353,7 @@ body {
     justify-content: center;
     width: 90%;
     max-width: 450px;
-    min-height: 320px; /* Force uniform height */
+    height: 360px; /* Force exactly identical heights */
     margin: 0 auto;
     box-sizing: border-box;
     
@@ -795,7 +795,7 @@ body {
         padding: 3rem 1.5rem;
         width: 95%;
         max-width: 100%;
-        min-height: 280px; /* Uniform height on mobile */
+        height: 330px; /* Force uniform height on mobile */
         box-sizing: border-box;
     }
     .family-container {
