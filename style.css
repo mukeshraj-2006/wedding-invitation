@@ -344,6 +344,37 @@ body {
     margin-bottom: 1rem;
     filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.4));
 }
+.frame-wrapper {
+    position: relative;
+    padding: 5rem 3rem 4rem 3rem; /* Space inside the frame borders to not overlap text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 450px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.frame-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: fill; /* Stretch to fit content */
+    filter: drop-shadow(0px 15px 20px rgba(0,0,0,0.6));
+}
+.frame-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
 .family-name {
     font-family: var(--font-serif);
     font-size: 4rem;
@@ -762,6 +793,10 @@ body {
     }
     .family-illustration {
         width: 280px;
+    }
+    .frame-wrapper {
+        padding: 4rem 2rem 3rem 2rem;
+        max-width: 330px;
     }
     .family-container {
         gap: 3rem;
