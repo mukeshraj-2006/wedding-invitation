@@ -346,25 +346,20 @@ body {
 }
 .frame-wrapper {
     position: relative;
-    padding: 8rem 4rem 7rem 4rem; /* Significant padding to avoid thick ornate borders */
+    padding: 3.5rem 2.5rem; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 550px;
     width: 100%;
     max-width: 450px;
     margin: 0 auto;
-}
-.frame-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    object-fit: fill; /* Stretch to fit content */
-    filter: drop-shadow(0px 15px 20px rgba(0,0,0,0.6));
+    
+    /* Elegant Metallic Gold Box */
+    background: rgba(0, 0, 0, 0.15);
+    border: 4px solid transparent;
+    border-image: linear-gradient(to bottom right, #fdf2c2, #d4af37, #8a5a19, #eed07e, #ffebb5, #b88a35) 1;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.3), inset 0px 0px 15px rgba(0,0,0,0.2);
 }
 .frame-content {
     position: relative;
@@ -795,7 +790,7 @@ body {
         width: 280px;
     }
     .frame-wrapper {
-        padding: 6rem 2.5rem 5rem 2.5rem;
+        padding: 3rem 1.5rem;
         max-width: 350px;
     }
     .family-container {
