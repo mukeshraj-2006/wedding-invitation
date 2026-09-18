@@ -723,13 +723,13 @@ body {
 .app-footer {
     position: relative;
     z-index: 5;
-    background-color: var(--bg-marriage);
-    color: var(--cream);
-    padding: 1rem;
-    font-family: var(--font-sans);
-    font-size: 0.9rem;
+    color: var(--bg-marriage); /* Match page text color */
+    padding: 1rem 0;
+    font-family: var(--font-serif); /* Match page elegant font */
+    font-size: 1.1rem;
+    font-style: italic;
     letter-spacing: 1px;
-    border-top: 2px solid var(--gold);
+    opacity: 0.9;
 }
 .app-footer p {
     margin: 0;
