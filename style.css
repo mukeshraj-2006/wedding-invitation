@@ -791,8 +791,8 @@ body {
         width: 280px;
     }
     .frame-wrapper {
-        padding: 2.5rem 1rem;
-        width: 90%;
+        padding: 3rem 1.5rem;
+        width: 95%;
         max-width: 100%;
         box-sizing: border-box;
     }
@@ -800,7 +800,7 @@ body {
         gap: 3rem;
     }
     .family-name {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     .family-details p {
         font-size: 1rem;
