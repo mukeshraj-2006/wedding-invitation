@@ -346,14 +346,14 @@ body {
 }
 .frame-wrapper {
     position: relative;
-    padding: 5rem 3rem 4rem 3rem; /* Space inside the frame borders to not overlap text */
+    padding: 8rem 4rem 7rem 4rem; /* Significant padding to avoid thick ornate borders */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 450px;
+    min-height: 550px;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     margin: 0 auto;
 }
 .frame-image {
@@ -795,8 +795,8 @@ body {
         width: 280px;
     }
     .frame-wrapper {
-        padding: 4rem 2rem 3rem 2rem;
-        max-width: 330px;
+        padding: 6rem 2.5rem 5rem 2.5rem;
+        max-width: 350px;
     }
     .family-container {
         gap: 3rem;
