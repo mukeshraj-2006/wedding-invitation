@@ -721,7 +721,10 @@ body {
 }
 
 .app-footer {
-    position: relative;
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
     z-index: 5;
     color: var(--bg-marriage); /* Match page text color */
     padding: 1rem 0;
@@ -730,6 +733,7 @@ body {
     font-style: italic;
     letter-spacing: 1px;
     opacity: 0.9;
+    text-align: center;
 }
 .app-footer p {
     margin: 0;
