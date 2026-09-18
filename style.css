@@ -351,9 +351,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 90%;
     max-width: 450px;
     margin: 0 auto;
+    box-sizing: border-box;
     
     /* Elegant Metallic Gold Box */
     background: rgba(0, 0, 0, 0.15);
@@ -790,8 +791,10 @@ body {
         width: 280px;
     }
     .frame-wrapper {
-        padding: 3rem 1.5rem;
-        max-width: 350px;
+        padding: 2.5rem 1rem;
+        width: 90%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
     .family-container {
         gap: 3rem;
